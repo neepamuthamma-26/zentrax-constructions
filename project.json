@@ -1,0 +1,26 @@
+{
+  "overview": "Premium redesign of the Zentrax Constructions website — a modern, luxury single-page experience for a leading construction and architecture company. Features animated hero, service cards, portfolio gallery, stats counters, and contact form.",
+  "features": [
+    "Full-screen animated hero with premium construction visuals",
+    "Five interactive service cards with hover effects",
+    "Portfolio grid with project hover overlays",
+    "Animated stats counters (scroll-triggered)",
+    "Sticky navigation with smooth scrolling",
+    "Premium contact form with validation",
+    "Deep navy / charcoal / gold luxury color palette",
+    "Framer Motion animations throughout",
+    "Mobile-first fully responsive layout"
+  ],
+  "category": "showcase",
+  "tags": [
+    "construction",
+    "architecture",
+    "luxury",
+    "portfolio",
+    "landing-page",
+    "premium",
+    "framer-motion",
+    "responsive"
+  ],
+  "last_updated": "2026-04-24T13:25:22.020Z"
+}
