@@ -25,7 +25,7 @@ export function Footer() {
   return (
     <footer
       className="relative"
-      style={{ background: "oklch(0.08 0.015 260)" }}
+      style={{ background: "oklch(0.93 0.01 60)" }}
       data-ocid="footer.section"
     >
       {/* Gold accent line at top */}
@@ -157,7 +157,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div
           className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-t"
-          style={{ borderColor: "oklch(0.22 0.02 260 / 0.5)" }}
+          style={{ borderColor: "oklch(var(--border))" }}
         >
           <p className="text-xs text-muted-foreground font-body text-center sm:text-left">
             © {year} Zentrax Constructions. All rights reserved.

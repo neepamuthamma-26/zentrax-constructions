@@ -21,19 +21,19 @@ export function HeroSection() {
           className="w-full h-full object-cover object-center"
           loading="eager"
         />
-        {/* Multi-layer dark gradient for premium depth */}
+        {/* Multi-layer light gradient overlay for premium feel */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, oklch(0.07 0.01 260 / 0.55) 0%, oklch(0.09 0.01 260 / 0.75) 50%, oklch(0.07 0.01 260 / 0.90) 100%)",
+              "linear-gradient(180deg, oklch(0.97 0.005 60 / 0.55) 0%, oklch(0.97 0.005 60 / 0.65) 50%, oklch(0.97 0.005 60 / 0.82) 100%)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(90deg, oklch(0.08 0.01 260 / 0.65) 0%, transparent 50%, oklch(0.08 0.01 260 / 0.65) 100%)",
+              "linear-gradient(90deg, oklch(0.97 0.005 60 / 0.4) 0%, transparent 50%, oklch(0.97 0.005 60 / 0.4) 100%)",
           }}
         />
         {/* Gold accent line at bottom */}
@@ -160,7 +160,7 @@ export function HeroSection() {
             className="px-9 py-3.5 rounded-sm font-body font-semibold text-sm tracking-wide focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none hover:shadow-gold-glow"
             style={{
               background: "oklch(var(--accent))",
-              color: "oklch(0.1 0.01 260)",
+              color: "oklch(0.98 0 0)",
             }}
           >
             View Projects

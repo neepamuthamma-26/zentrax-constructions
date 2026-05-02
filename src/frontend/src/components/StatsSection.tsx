@@ -59,9 +59,9 @@ function StatCard({ stat, index }: { stat: StatItem; index: number }) {
       data-ocid={`stats.item.${index + 1}`}
       className="relative group flex flex-col p-8 lg:p-10 rounded-xl overflow-hidden"
       style={{
-        background: "oklch(0.16 0.01 260)",
+        background: "oklch(0.99 0.003 60)",
         boxShadow:
-          "0 4px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.04)",
+          "0 4px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8)",
       }}
     >
       {/* Gold top border accent */}
@@ -123,7 +123,7 @@ export function StatsSection() {
       className="relative overflow-hidden py-24 lg:py-32"
       style={{
         background:
-          "linear-gradient(160deg, oklch(0.11 0.015 260) 0%, oklch(0.145 0.01 260) 60%, oklch(0.13 0.02 260) 100%)",
+          "linear-gradient(160deg, oklch(0.93 0.01 60) 0%, oklch(0.95 0.008 60) 60%, oklch(0.91 0.012 58) 100%)",
       }}
       data-ocid="stats.section"
     >

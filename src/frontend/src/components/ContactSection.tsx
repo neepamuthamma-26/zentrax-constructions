@@ -96,8 +96,8 @@ export function ContactSection() {
     "w-full px-4 py-3 rounded-md font-body text-sm text-foreground placeholder:text-muted-foreground/50 transition-smooth outline-none border focus-visible:ring-2 focus-visible:ring-ring";
 
   const inputStyle = {
-    background: "oklch(0.09 0.01 260)",
-    borderColor: "oklch(0.22 0.02 260)",
+    background: "oklch(0.99 0.003 60)",
+    borderColor: "oklch(var(--border))",
   };
 
   return (
@@ -238,7 +238,7 @@ export function ContactSection() {
             <div
               className="p-5 rounded-lg border-l-2"
               style={{
-                background: "oklch(0.09 0.01 260)",
+                background: "oklch(0.95 0.005 60)",
                 borderLeftColor: "oklch(var(--accent) / 0.6)",
               }}
             >
@@ -268,7 +268,7 @@ export function ContactSection() {
                 transition={{ duration: 0.5 }}
                 data-ocid="contact.success_state"
                 className="h-full flex flex-col items-center justify-center text-center py-20 px-8 rounded-xl border border-border"
-                style={{ background: "oklch(0.09 0.01 260)" }}
+                style={{ background: "oklch(0.96 0.005 60)" }}
               >
                 <div
                   className="w-14 h-14 rounded-full flex items-center justify-center mb-6"
@@ -309,7 +309,7 @@ export function ContactSection() {
                 onSubmit={handleSubmit}
                 noValidate
                 className="rounded-xl border border-border p-8 lg:p-10 flex flex-col gap-5"
-                style={{ background: "oklch(0.09 0.01 260)" }}
+                style={{ background: "oklch(0.97 0.003 60)" }}
                 data-ocid="contact.form"
               >
                 {/* Name + Email */}
@@ -492,7 +492,7 @@ export function ContactSection() {
                         <option
                           key={s.title}
                           value={s.title}
-                          style={{ background: "oklch(0.09 0.01 260)" }}
+                          style={{ background: "oklch(0.97 0.003 60)" }}
                         >
                           {s.title}
                         </option>

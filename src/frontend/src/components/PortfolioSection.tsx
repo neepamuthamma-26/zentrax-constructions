@@ -22,7 +22,7 @@ function PortfolioCard({
       }}
       data-ocid={`portfolio.item.${index + 1}`}
       className="group relative overflow-hidden rounded-xl cursor-pointer"
-      style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.35)" }}
+      style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.15)" }}
     >
       {/* Image wrapper with zoom on hover */}
       <div className="relative aspect-[4/3] overflow-hidden">
@@ -41,7 +41,7 @@ function PortfolioCard({
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to top, oklch(0.07 0.01 260 / 0.75) 0%, oklch(0.07 0.01 260 / 0.25) 40%, transparent 70%)",
+              "linear-gradient(to top, oklch(0.15 0.01 260 / 0.65) 0%, oklch(0.15 0.01 260 / 0.15) 40%, transparent 70%)",
           }}
           aria-hidden="true"
         />
@@ -54,7 +54,7 @@ function PortfolioCard({
           transition={{ duration: 0.35 }}
           style={{
             background:
-              "linear-gradient(to top, oklch(0.07 0.01 260 / 0.96) 0%, oklch(0.07 0.01 260 / 0.6) 50%, transparent 100%)",
+              "linear-gradient(to top, oklch(0.12 0.01 260 / 0.94) 0%, oklch(0.12 0.01 260 / 0.55) 50%, transparent 100%)",
           }}
         >
           <span
@@ -111,7 +111,7 @@ export function PortfolioSection() {
     <section
       id="portfolio"
       className="py-24 lg:py-32 relative overflow-hidden"
-      style={{ background: "oklch(0.12 0.01 260)" }}
+      style={{ background: "oklch(var(--background))" }}
       data-ocid="portfolio.section"
     >
       {/* Decorative background detail */}

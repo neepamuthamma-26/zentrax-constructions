@@ -55,33 +55,37 @@ export function Navbar() {
         transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-card/95 backdrop-blur-md border-b border-border shadow-card"
-            : "bg-transparent"
+            ? "bg-card/98 backdrop-blur-md border-b border-border shadow-card"
+            : "bg-card/90 backdrop-blur-sm border-b border-border/50"
         }`}
         role="banner"
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Logo */}
           <button
             type="button"
             onClick={() => handleNavClick("#hero")}
-            className="flex items-center gap-2 group focus:outline-none"
+            className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm"
             aria-label="Zentrax Constructions - Go to top"
             data-ocid="nav.logo"
           >
+            <img
+              src="/assets/logo.png"
+              alt="Zentrax Constructions"
+              className="h-16 w-auto object-contain max-w-[220px]"
+              onError={(e) => {
+                const target = e.currentTarget;
+                target.style.display = "none";
+                const fallback =
+                  target.nextElementSibling as HTMLElement | null;
+                if (fallback) fallback.style.display = "flex";
+              }}
+            />
             <span
-              className="w-8 h-8 rounded-sm flex items-center justify-center"
-              style={{ background: "oklch(var(--accent))" }}
+              style={{ display: "none" }}
+              className="font-display font-black text-xl tracking-[0.12em] uppercase text-accent-gold flex items-center"
             >
-              <span
-                className="font-display font-bold text-sm"
-                style={{ color: "oklch(var(--accent-foreground))" }}
-              >
-                Z
-              </span>
-            </span>
-            <span className="font-display font-semibold text-foreground tracking-wide text-lg group-hover:text-accent-gold transition-smooth">
-              Zentrax Constructions
+              ZENTRAX CONSTRUCTIONS
             </span>
           </button>
 

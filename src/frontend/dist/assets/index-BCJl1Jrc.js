@@ -18403,6 +18403,7 @@ const ReactDOM = /* @__PURE__ */ getDefaultExportFromCjs(clientExports);
 const NAV_LINKS = [
   { label: "Home", href: "#hero" },
   { label: "Services", href: "#services" },
+  { label: "Properties for Lease", href: "#properties-for-lease" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "About Us", href: "#stats" },
   { label: "Contact", href: "#contact" }
@@ -27041,7 +27042,7 @@ const SOCIAL_LINKS = [
   { icon: Linkedin, label: "LinkedIn", href: "#" },
   { icon: SiX, label: "X (Twitter)", href: "#" }
 ];
-function scrollToSection$3(href) {
+function scrollToSection$4(href) {
   const id2 = href.replace("#", "");
   const el = document.getElementById(id2);
   if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -27055,7 +27056,7 @@ function Footer() {
     "footer",
     {
       className: "relative",
-      style: { background: "oklch(0.08 0.015 260)" },
+      style: { background: "oklch(0.93 0.01 60)" },
       "data-ocid": "footer.section",
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -27121,7 +27122,7 @@ function Footer() {
                     "button",
                     {
                       type: "button",
-                      onClick: () => scrollToSection$3(link.href),
+                      onClick: () => scrollToSection$4(link.href),
                       "data-ocid": "footer.nav_link",
                       className: "text-sm font-body text-muted-foreground hover:text-accent-gold transition-smooth text-left",
                       children: link.label
@@ -27183,7 +27184,7 @@ function Footer() {
             "div",
             {
               className: "py-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-t",
-              style: { borderColor: "oklch(0.22 0.02 260 / 0.5)" },
+              style: { borderColor: "oklch(var(--border))" },
               children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-xs text-muted-foreground font-body text-center sm:text-left", children: [
                   "© ",
@@ -27212,7 +27213,7 @@ function Footer() {
     }
   );
 }
-function scrollToSection$2(href) {
+function scrollToSection$3(href) {
   const id2 = href.replace("#", "");
   const el = document.getElementById(id2);
   if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -27246,7 +27247,7 @@ function Navbar() {
     };
   }, []);
   const handleNavClick = (href) => {
-    scrollToSection$2(href);
+    scrollToSection$3(href);
     setMobileOpen(false);
   };
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
@@ -27256,34 +27257,40 @@ function Navbar() {
         initial: { y: -80, opacity: 0 },
         animate: { y: 0, opacity: 1 },
         transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
-        className: `fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "bg-card/95 backdrop-blur-md border-b border-border shadow-card" : "bg-transparent"}`,
+        className: `fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "bg-card/98 backdrop-blur-md border-b border-border shadow-card" : "bg-card/90 backdrop-blur-sm border-b border-border/50"}`,
         role: "banner",
-        children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between", children: [
+        children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "button",
             {
               type: "button",
               onClick: () => handleNavClick("#hero"),
-              className: "flex items-center gap-2 group focus:outline-none",
+              className: "flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm",
               "aria-label": "Zentrax Constructions - Go to top",
               "data-ocid": "nav.logo",
               children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  "span",
+                  "img",
                   {
-                    className: "w-8 h-8 rounded-sm flex items-center justify-center",
-                    style: { background: "oklch(var(--accent))" },
-                    children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-                      "span",
-                      {
-                        className: "font-display font-bold text-sm",
-                        style: { color: "oklch(var(--accent-foreground))" },
-                        children: "Z"
-                      }
-                    )
+                    src: "/assets/logo.png",
+                    alt: "Zentrax Constructions",
+                    className: "h-16 w-auto object-contain max-w-[220px]",
+                    onError: (e) => {
+                      const target = e.currentTarget;
+                      target.style.display = "none";
+                      const fallback = target.nextElementSibling;
+                      if (fallback) fallback.style.display = "flex";
+                    }
                   }
                 ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display font-semibold text-foreground tracking-wide text-lg group-hover:text-accent-gold transition-smooth", children: "Zentrax Constructions" })
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "span",
+                  {
+                    style: { display: "none" },
+                    className: "font-display font-black text-xl tracking-[0.12em] uppercase text-accent-gold flex items-center",
+                    children: "ZENTRAX CONSTRUCTIONS"
+                  }
+                )
               ]
             }
           ),
@@ -27466,8 +27473,8 @@ function ContactSection() {
   }
   const inputBase = "w-full px-4 py-3 rounded-md font-body text-sm text-foreground placeholder:text-muted-foreground/50 transition-smooth outline-none border focus-visible:ring-2 focus-visible:ring-ring";
   const inputStyle = {
-    background: "oklch(0.09 0.01 260)",
-    borderColor: "oklch(0.22 0.02 260)"
+    background: "oklch(0.99 0.003 60)",
+    borderColor: "oklch(var(--border))"
   };
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     "section",
@@ -27603,7 +27610,7 @@ function ContactSection() {
                     {
                       className: "p-5 rounded-lg border-l-2",
                       style: {
-                        background: "oklch(0.09 0.01 260)",
+                        background: "oklch(0.95 0.005 60)",
                         borderLeftColor: "oklch(var(--accent) / 0.6)"
                       },
                       children: [
@@ -27632,7 +27639,7 @@ function ContactSection() {
                     transition: { duration: 0.5 },
                     "data-ocid": "contact.success_state",
                     className: "h-full flex flex-col items-center justify-center text-center py-20 px-8 rounded-xl border border-border",
-                    style: { background: "oklch(0.09 0.01 260)" },
+                    style: { background: "oklch(0.96 0.005 60)" },
                     children: [
                       /* @__PURE__ */ jsxRuntimeExports.jsx(
                         "div",
@@ -27676,7 +27683,7 @@ function ContactSection() {
                     onSubmit: handleSubmit,
                     noValidate: true,
                     className: "rounded-xl border border-border p-8 lg:p-10 flex flex-col gap-5",
-                    style: { background: "oklch(0.09 0.01 260)" },
+                    style: { background: "oklch(0.97 0.003 60)" },
                     "data-ocid": "contact.form",
                     children: [
                       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-5", children: [
@@ -27843,7 +27850,7 @@ function ContactSection() {
                                   "option",
                                   {
                                     value: s.title,
-                                    style: { background: "oklch(0.09 0.01 260)" },
+                                    style: { background: "oklch(0.97 0.003 60)" },
                                     children: s.title
                                   },
                                   s.title
@@ -27944,7 +27951,7 @@ function ContactSection() {
     }
   );
 }
-function scrollToSection$1(id2) {
+function scrollToSection$2(id2) {
   const el = document.getElementById(id2);
   if (el) el.scrollIntoView({ behavior: "smooth" });
 }
@@ -27956,7 +27963,7 @@ function CtaSection() {
       className: "relative py-28 lg:py-40 overflow-hidden",
       "data-ocid": "cta.section",
       style: {
-        background: "linear-gradient(135deg, oklch(0.09 0.015 260) 0%, oklch(0.13 0.01 260) 50%, oklch(0.09 0.015 260) 100%)"
+        background: "linear-gradient(135deg, oklch(0.52 0.14 58) 0%, oklch(0.60 0.16 55) 50%, oklch(0.50 0.14 58) 100%)"
       },
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -27985,7 +27992,7 @@ function CtaSection() {
             className: "absolute right-[-2rem] top-1/2 -translate-y-1/2 font-display font-bold select-none pointer-events-none",
             style: {
               fontSize: "clamp(12rem, 25vw, 22rem)",
-              color: "oklch(var(--accent) / 0.04)",
+              color: "oklch(0.99 0 0 / 0.07)",
               lineHeight: 1
             },
             "aria-hidden": "true",
@@ -28027,7 +28034,8 @@ function CtaSection() {
               whileInView: { opacity: 1, y: 0 },
               viewport: { once: true },
               transition: { duration: 0.6, delay: 0.1 },
-              className: "text-xs uppercase tracking-[0.3em] text-accent-gold font-body font-semibold mb-5",
+              className: "text-xs uppercase tracking-[0.3em] font-body font-semibold mb-5",
+              style: { color: "oklch(0.97 0 0 / 0.85)" },
               children: "Ready to Begin"
             }
           ),
@@ -28038,8 +28046,11 @@ function CtaSection() {
               whileInView: { opacity: 1, y: 0 },
               viewport: { once: true },
               transition: { duration: 0.8, delay: 0.2 },
-              className: "font-display font-bold text-foreground leading-tight tracking-tight mb-6",
-              style: { fontSize: "clamp(2.2rem, 5.5vw, 3.75rem)" },
+              className: "font-display font-bold leading-tight tracking-tight mb-6",
+              style: {
+                color: "oklch(0.99 0 0)",
+                fontSize: "clamp(2.2rem, 5.5vw, 3.75rem)"
+              },
               children: [
                 "Let's Create Something",
                 " ",
@@ -28054,7 +28065,8 @@ function CtaSection() {
               whileInView: { opacity: 1, y: 0 },
               viewport: { once: true },
               transition: { duration: 0.7, delay: 0.35 },
-              className: "font-body text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto mb-10",
+              className: "font-body text-lg leading-relaxed max-w-2xl mx-auto mb-10",
+              style: { color: "oklch(0.97 0 0 / 0.82)" },
               children: "Your vision deserves the finest execution. Partner with Zentrax Constructions and transform your space into a masterpiece."
             }
           ),
@@ -28069,12 +28081,12 @@ function CtaSection() {
                 "button",
                 {
                   type: "button",
-                  onClick: () => scrollToSection$1("contact"),
+                  onClick: () => scrollToSection$2("contact"),
                   "data-ocid": "cta.start_project_button",
                   className: "inline-flex items-center gap-2 px-10 py-4 rounded-md font-body font-semibold text-sm transition-smooth focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none hover:opacity-90 hover:shadow-gold-glow",
                   style: {
-                    background: "oklch(var(--accent))",
-                    color: "oklch(0.10 0.01 260)"
+                    background: "oklch(0.99 0 0)",
+                    color: "oklch(0.50 0.14 58)"
                   },
                   children: "Start Your Project"
                 }
@@ -28096,7 +28108,7 @@ function CtaSection() {
     }
   );
 }
-function scrollToSection(id2) {
+function scrollToSection$1(id2) {
   const el = document.getElementById(id2);
   if (el) el.scrollIntoView({ behavior: "smooth" });
 }
@@ -28123,7 +28135,7 @@ function HeroSection() {
             {
               className: "absolute inset-0",
               style: {
-                background: "linear-gradient(180deg, oklch(0.07 0.01 260 / 0.55) 0%, oklch(0.09 0.01 260 / 0.75) 50%, oklch(0.07 0.01 260 / 0.90) 100%)"
+                background: "linear-gradient(180deg, oklch(0.97 0.005 60 / 0.55) 0%, oklch(0.97 0.005 60 / 0.65) 50%, oklch(0.97 0.005 60 / 0.82) 100%)"
               }
             }
           ),
@@ -28132,7 +28144,7 @@ function HeroSection() {
             {
               className: "absolute inset-0",
               style: {
-                background: "linear-gradient(90deg, oklch(0.08 0.01 260 / 0.65) 0%, transparent 50%, oklch(0.08 0.01 260 / 0.65) 100%)"
+                background: "linear-gradient(90deg, oklch(0.97 0.005 60 / 0.4) 0%, transparent 50%, oklch(0.97 0.005 60 / 0.4) 100%)"
               }
             }
           ),
@@ -28282,7 +28294,7 @@ function HeroSection() {
                   motion.button,
                   {
                     type: "button",
-                    onClick: () => scrollToSection("portfolio"),
+                    onClick: () => scrollToSection$1("portfolio"),
                     "data-ocid": "hero.view_projects_button",
                     whileHover: { scale: 1.03, y: -2 },
                     whileTap: { scale: 0.97 },
@@ -28290,7 +28302,7 @@ function HeroSection() {
                     className: "px-9 py-3.5 rounded-sm font-body font-semibold text-sm tracking-wide focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none hover:shadow-gold-glow",
                     style: {
                       background: "oklch(var(--accent))",
-                      color: "oklch(0.1 0.01 260)"
+                      color: "oklch(0.98 0 0)"
                     },
                     children: "View Projects"
                   }
@@ -28299,7 +28311,7 @@ function HeroSection() {
                   motion.button,
                   {
                     type: "button",
-                    onClick: () => scrollToSection("contact"),
+                    onClick: () => scrollToSection$1("contact"),
                     "data-ocid": "hero.contact_button",
                     whileHover: { scale: 1.03, y: -2 },
                     whileTap: { scale: 0.97 },
@@ -28345,7 +28357,7 @@ function HeroSection() {
           motion.button,
           {
             type: "button",
-            onClick: () => scrollToSection("services"),
+            onClick: () => scrollToSection$1("services"),
             initial: { opacity: 0 },
             animate: { opacity: 1 },
             transition: { delay: 1.5, duration: 0.6 },
@@ -28390,7 +28402,7 @@ function PortfolioCard({
       },
       "data-ocid": `portfolio.item.${index2 + 1}`,
       className: "group relative overflow-hidden rounded-xl cursor-pointer",
-      style: { boxShadow: "0 8px 40px rgba(0,0,0,0.35)" },
+      style: { boxShadow: "0 8px 40px rgba(0,0,0,0.15)" },
       children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative aspect-[4/3] overflow-hidden", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           motion.img,
@@ -28409,7 +28421,7 @@ function PortfolioCard({
           {
             className: "absolute inset-0 pointer-events-none",
             style: {
-              background: "linear-gradient(to top, oklch(0.07 0.01 260 / 0.75) 0%, oklch(0.07 0.01 260 / 0.25) 40%, transparent 70%)"
+              background: "linear-gradient(to top, oklch(0.15 0.01 260 / 0.65) 0%, oklch(0.15 0.01 260 / 0.15) 40%, transparent 70%)"
             },
             "aria-hidden": "true"
           }
@@ -28422,7 +28434,7 @@ function PortfolioCard({
             whileHover: { opacity: 1 },
             transition: { duration: 0.35 },
             style: {
-              background: "linear-gradient(to top, oklch(0.07 0.01 260 / 0.96) 0%, oklch(0.07 0.01 260 / 0.6) 50%, transparent 100%)"
+              background: "linear-gradient(to top, oklch(0.12 0.01 260 / 0.94) 0%, oklch(0.12 0.01 260 / 0.55) 50%, transparent 100%)"
             },
             children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -28488,7 +28500,7 @@ function PortfolioSection() {
     {
       id: "portfolio",
       className: "py-24 lg:py-32 relative overflow-hidden",
-      style: { background: "oklch(0.12 0.01 260)" },
+      style: { background: "oklch(var(--background))" },
       "data-ocid": "portfolio.section",
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -28595,6 +28607,167 @@ function PortfolioSection() {
           )
         ] })
       ]
+    }
+  );
+}
+function scrollToSection(id2) {
+  const el = document.getElementById(id2);
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+}
+function PropertiesForLeaseSection() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "section",
+    {
+      id: "properties-for-lease",
+      className: "py-24 lg:py-32",
+      style: { background: "oklch(var(--secondary))" },
+      "data-ocid": "properties.section",
+      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 lg:px-8", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          motion.div,
+          {
+            initial: { opacity: 0, y: 28 },
+            whileInView: { opacity: 1, y: 0 },
+            viewport: { once: true },
+            transition: { duration: 0.7, ease: "easeOut" },
+            className: "max-w-2xl mb-16",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-xs uppercase tracking-[0.35em] font-body font-semibold mb-3 text-accent-gold inline-flex items-center gap-2", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "span",
+                  {
+                    className: "block w-5 h-px",
+                    style: { background: "oklch(var(--accent))" },
+                    "aria-hidden": "true"
+                  }
+                ),
+                "Real Estate"
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display font-bold text-foreground text-4xl lg:text-5xl leading-tight mb-4 tracking-tight", children: "Properties for Lease" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "div",
+                {
+                  className: "w-14 h-0.5 mb-5",
+                  style: { background: "oklch(var(--accent))" },
+                  "aria-hidden": "true"
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-muted-foreground font-body leading-relaxed text-base lg:text-lg", children: "Explore our available rental and lease properties — premium locations with flexible terms tailored to your needs." })
+            ]
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          motion.div,
+          {
+            initial: { opacity: 0, y: 40 },
+            whileInView: { opacity: 1, y: 0 },
+            viewport: { once: true },
+            transition: { duration: 0.65, ease: [0.25, 0.46, 0.45, 0.94] },
+            "data-ocid": "properties.item.1",
+            className: "group max-w-lg rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-gold-glow transition-smooth",
+            style: { background: "oklch(var(--card))" },
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative aspect-[4/3] overflow-hidden", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  motion.img,
+                  {
+                    src: "/assets/property-lease.jpg",
+                    alt: "#44, Hombelaku, Ilavala Hobli, Mysuru, Karnataka",
+                    className: "w-full h-full object-cover",
+                    whileHover: { scale: 1.04 },
+                    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
+                    loading: "lazy",
+                    onError: (e) => {
+                      const target = e.currentTarget;
+                      if (!target.src.includes("/assets/generated/")) {
+                        target.src = "/assets/generated/property-lease.dim_800x600.jpg";
+                      }
+                    }
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "div",
+                  {
+                    className: "absolute top-4 left-4 px-3 py-1.5 rounded-full text-xs font-body font-bold uppercase tracking-wider",
+                    style: {
+                      background: "oklch(var(--accent))",
+                      color: "oklch(0.98 0 0)"
+                    },
+                    "data-ocid": "properties.badge.1",
+                    children: "For Lease"
+                  }
+                )
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-6", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "p",
+                  {
+                    className: "text-[11px] uppercase tracking-[0.25em] font-body font-semibold mb-2",
+                    style: { color: "oklch(var(--accent))" },
+                    children: "Residential Property"
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-2 mb-4", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    MapPin,
+                    {
+                      size: 16,
+                      className: "mt-0.5 shrink-0",
+                      style: { color: "oklch(var(--accent))" }
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "font-display font-bold text-foreground text-lg leading-snug", children: [
+                    "#44, Hombelaku, Ilavala Hobli,",
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+                    "Mysuru, Karnataka"
+                  ] })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "div",
+                  {
+                    className: "w-12 h-px mb-5",
+                    style: { background: "oklch(var(--accent) / 0.4)" },
+                    "aria-hidden": "true"
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "flex flex-wrap gap-2 mb-6", children: [
+                  "Residential",
+                  "Prime Location",
+                  "Mysuru",
+                  "Flexible Terms"
+                ].map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "li",
+                  {
+                    className: "px-3 py-1 rounded-full text-xs font-body font-medium border border-border text-muted-foreground",
+                    children: tag
+                  },
+                  tag
+                )) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "button",
+                    {
+                      type: "button",
+                      onClick: () => scrollToSection("contact"),
+                      "data-ocid": "properties.enquire_button.1",
+                      className: "inline-flex items-center gap-2 px-6 py-2.5 rounded-md font-body font-semibold text-sm transition-smooth focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none hover:opacity-90 hover:shadow-gold-glow",
+                      style: {
+                        background: "oklch(var(--accent))",
+                        color: "oklch(0.98 0 0)"
+                      },
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { size: 14 }),
+                        "Enquire Now"
+                      ]
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-muted-foreground font-body", children: "Contact us for pricing" })
+                ] })
+              ] })
+            ]
+          }
+        )
+      ] })
     }
   );
 }
@@ -28793,8 +28966,8 @@ function StatCard({ stat, index: index2 }) {
       "data-ocid": `stats.item.${index2 + 1}`,
       className: "relative group flex flex-col p-8 lg:p-10 rounded-xl overflow-hidden",
       style: {
-        background: "oklch(0.16 0.01 260)",
-        boxShadow: "0 4px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.04)"
+        background: "oklch(0.99 0.003 60)",
+        boxShadow: "0 4px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8)"
       },
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -28850,7 +29023,7 @@ function StatsSection() {
       id: "stats",
       className: "relative overflow-hidden py-24 lg:py-32",
       style: {
-        background: "linear-gradient(160deg, oklch(0.11 0.015 260) 0%, oklch(0.145 0.01 260) 60%, oklch(0.13 0.02 260) 100%)"
+        background: "linear-gradient(160deg, oklch(0.93 0.01 60) 0%, oklch(0.95 0.008 60) 60%, oklch(0.91 0.012 58) 100%)"
       },
       "data-ocid": "stats.section",
       children: [
@@ -28993,6 +29166,7 @@ function Home() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(HeroSection, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(ServicesSection, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(PropertiesForLeaseSection, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(PortfolioSection, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(StatsSection, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(CtaSection, {}),

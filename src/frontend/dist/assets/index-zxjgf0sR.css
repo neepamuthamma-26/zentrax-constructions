@@ -505,30 +505,30 @@ video {
     --font-mono: "Geist Mono", monospace;
     --radius: 0.5rem;
 
-    --background: 0.98 0 0;
-    --foreground: 0.15 0 0;
+    --background: 1.0 0 0;
+    --foreground: 0.18 0.015 260;
     --card: 0.99 0 0;
-    --card-foreground: 0.12 0 0;
-    --popover: 0.99 0 0;
-    --popover-foreground: 0.12 0 0;
+    --card-foreground: 0.18 0.015 260;
+    --popover: 1.0 0 0;
+    --popover-foreground: 0.18 0.015 260;
 
-    --primary: 0.38 0.12 58;
-    --primary-foreground: 0.98 0 0;
+    --primary: 0.5 0.14 55;
+    --primary-foreground: 1.0 0 0;
 
-    --secondary: 0.95 0.02 58;
-    --secondary-foreground: 0.25 0 0;
-    --muted: 0.92 0 0;
-    --muted-foreground: 0.52 0 0;
+    --secondary: 0.97 0.008 60;
+    --secondary-foreground: 0.22 0.01 260;
+    --muted: 0.95 0.006 60;
+    --muted-foreground: 0.48 0.012 260;
 
-    --accent: 0.65 0.15 58;
-    --accent-foreground: 0.98 0 0;
+    --accent: 0.5 0.14 55;
+    --accent-foreground: 1.0 0 0;
 
     --destructive: 0.55 0.22 25;
-    --destructive-foreground: 0.98 0 0;
+    --destructive-foreground: 1.0 0 0;
 
-    --border: 0.88 0.02 58;
-    --input: 0.88 0.02 58;
-    --ring: 0.65 0.15 58;
+    --border: 0.9 0.008 60;
+    --input: 0.9 0.008 60;
+    --ring: 0.5 0.14 55;
 
     --chart-1: 0.65 0.15 58;
     --chart-2: 0.58 0.15 180;
@@ -536,41 +536,41 @@ video {
     --chart-4: 0.72 0.18 90;
     --chart-5: 0.68 0.16 45;
 
-    --sidebar: 0.98 0 0;
-    --sidebar-foreground: 0.15 0 0;
-    --sidebar-primary: 0.38 0.12 58;
-    --sidebar-primary-foreground: 0.98 0 0;
-    --sidebar-accent: 0.92 0 0;
-    --sidebar-accent-foreground: 0.25 0 0;
-    --sidebar-border: 0.88 0.02 58;
-    --sidebar-ring: 0.65 0.15 58;
+    --sidebar: 0.98 0.005 60;
+    --sidebar-foreground: 0.18 0.015 260;
+    --sidebar-primary: 0.5 0.14 55;
+    --sidebar-primary-foreground: 1.0 0 0;
+    --sidebar-accent: 0.95 0.006 60;
+    --sidebar-accent-foreground: 0.22 0.01 260;
+    --sidebar-border: 0.9 0.008 60;
+    --sidebar-ring: 0.5 0.14 55;
   }
 
   .dark {
-    --background: 0.11 0.01 260;
-    --foreground: 0.96 0 0;
-    --card: 0.145 0.01 260;
-    --card-foreground: 0.95 0 0;
-    --popover: 0.18 0.01 260;
-    --popover-foreground: 0.95 0 0;
+    --background: 1.0 0 0;
+    --foreground: 0.18 0.015 260;
+    --card: 0.99 0 0;
+    --card-foreground: 0.18 0.015 260;
+    --popover: 1.0 0 0;
+    --popover-foreground: 0.18 0.015 260;
 
-    --primary: 0.68 0.18 58;
-    --primary-foreground: 0.11 0.01 260;
+    --primary: 0.5 0.14 55;
+    --primary-foreground: 1.0 0 0;
 
-    --secondary: 0.18 0.01 260;
-    --secondary-foreground: 0.85 0 0;
-    --muted: 0.18 0.01 260;
-    --muted-foreground: 0.58 0 0;
+    --secondary: 0.97 0.008 60;
+    --secondary-foreground: 0.22 0.01 260;
+    --muted: 0.95 0.006 60;
+    --muted-foreground: 0.48 0.012 260;
 
-    --accent: 0.68 0.18 58;
-    --accent-foreground: 0.11 0.01 260;
+    --accent: 0.5 0.14 55;
+    --accent-foreground: 1.0 0 0;
 
-    --destructive: 0.65 0.19 22;
-    --destructive-foreground: 0.11 0.01 260;
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 1.0 0 0;
 
-    --border: 0.22 0.02 260;
-    --input: 0.22 0.02 260;
-    --ring: 0.68 0.18 58;
+    --border: 0.9 0.008 60;
+    --input: 0.9 0.008 60;
+    --ring: 0.5 0.14 55;
 
     --chart-1: 0.68 0.18 58;
     --chart-2: 0.62 0.18 180;
@@ -578,14 +578,14 @@ video {
     --chart-4: 0.75 0.2 90;
     --chart-5: 0.72 0.18 45;
 
-    --sidebar: 0.145 0.01 260;
-    --sidebar-foreground: 0.95 0 0;
-    --sidebar-primary: 0.68 0.18 58;
-    --sidebar-primary-foreground: 0.11 0.01 260;
-    --sidebar-accent: 0.18 0.01 260;
-    --sidebar-accent-foreground: 0.85 0 0;
-    --sidebar-border: 0.22 0.02 260;
-    --sidebar-ring: 0.68 0.18 58;
+    --sidebar: 0.98 0.005 60;
+    --sidebar-foreground: 0.18 0.015 260;
+    --sidebar-primary: 0.5 0.14 55;
+    --sidebar-primary-foreground: 1.0 0 0;
+    --sidebar-accent: 0.95 0.006 60;
+    --sidebar-accent-foreground: 0.22 0.01 260;
+    --sidebar-border: 0.9 0.008 60;
+    --sidebar-ring: 0.5 0.14 55;
   }
 
   * {
@@ -673,6 +673,9 @@ video {
 }
 .left-2 {
   left: 0.5rem;
+}
+.left-4 {
+  left: 1rem;
 }
 .left-6 {
   left: 1.5rem;
@@ -984,6 +987,9 @@ video {
 .h-2\.5 {
   height: 0.625rem;
 }
+.h-20 {
+  height: 5rem;
+}
 .h-24 {
   height: 6rem;
 }
@@ -1181,8 +1187,14 @@ video {
 .max-w-7xl {
   max-width: 80rem;
 }
+.max-w-\[220px\] {
+  max-width: 220px;
+}
 .max-w-\[calc\(100\%-2rem\)\] {
   max-width: calc(100% - 2rem);
+}
+.max-w-lg {
+  max-width: 32rem;
 }
 .max-w-max {
   max-width: -moz-max-content;
@@ -1431,6 +1443,9 @@ video {
 .break-words {
   overflow-wrap: break-word;
 }
+.rounded-2xl {
+  border-radius: 1rem;
+}
 .rounded-\[2px\] {
   border-radius: 2px;
 }
@@ -1597,6 +1612,10 @@ video {
 .fill-primary {
   fill: oklch(var(--primary) / 1);
 }
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1697,6 +1716,10 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
 }
 .py-20 {
   padding-top: 5rem;
@@ -1810,6 +1833,9 @@ video {
 .text-\[10px\] {
   font-size: 10px;
 }
+.text-\[11px\] {
+  font-size: 11px;
+}
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1829,6 +1855,9 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+.font-black {
+  font-weight: 900;
 }
 .font-bold {
   font-weight: 700;
@@ -1869,6 +1898,9 @@ video {
 }
 .leading-tight {
   line-height: 1.25;
+}
+.tracking-\[0\.12em\] {
+  letter-spacing: 0.12em;
 }
 .tracking-\[0\.25em\] {
   letter-spacing: 0.25em;
@@ -2628,10 +2660,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
 }
-
-.group:hover .group-hover\:text-accent-gold {
-    color: oklch(var(--accent));
-  }
 
 .peer\/menu-button:hover ~ .peer-hover\/menu-button\:text-sidebar-accent-foreground {
   color: oklch(var(--sidebar-accent-foreground));

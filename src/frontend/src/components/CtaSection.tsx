@@ -13,7 +13,7 @@ export function CtaSection() {
       data-ocid="cta.section"
       style={{
         background:
-          "linear-gradient(135deg, oklch(0.09 0.015 260) 0%, oklch(0.13 0.01 260) 50%, oklch(0.09 0.015 260) 100%)",
+          "linear-gradient(135deg, oklch(0.52 0.14 58) 0%, oklch(0.60 0.16 55) 50%, oklch(0.50 0.14 58) 100%)",
       }}
     >
       {/* Subtle grid texture */}
@@ -41,7 +41,7 @@ export function CtaSection() {
         className="absolute right-[-2rem] top-1/2 -translate-y-1/2 font-display font-bold select-none pointer-events-none"
         style={{
           fontSize: "clamp(12rem, 25vw, 22rem)",
-          color: "oklch(var(--accent) / 0.04)",
+          color: "oklch(0.99 0 0 / 0.07)",
           lineHeight: 1,
         }}
         aria-hidden="true"
@@ -81,7 +81,8 @@ export function CtaSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-xs uppercase tracking-[0.3em] text-accent-gold font-body font-semibold mb-5"
+          className="text-xs uppercase tracking-[0.3em] font-body font-semibold mb-5"
+          style={{ color: "oklch(0.97 0 0 / 0.85)" }}
         >
           Ready to Begin
         </motion.p>
@@ -91,8 +92,11 @@ export function CtaSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-display font-bold text-foreground leading-tight tracking-tight mb-6"
-          style={{ fontSize: "clamp(2.2rem, 5.5vw, 3.75rem)" }}
+          className="font-display font-bold leading-tight tracking-tight mb-6"
+          style={{
+            color: "oklch(0.99 0 0)",
+            fontSize: "clamp(2.2rem, 5.5vw, 3.75rem)",
+          }}
         >
           Let's Create Something{" "}
           <span className="text-accent-gold">Extraordinary</span>
@@ -103,7 +107,8 @@ export function CtaSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.35 }}
-          className="font-body text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto mb-10"
+          className="font-body text-lg leading-relaxed max-w-2xl mx-auto mb-10"
+          style={{ color: "oklch(0.97 0 0 / 0.82)" }}
         >
           Your vision deserves the finest execution. Partner with Zentrax
           Constructions and transform your space into a masterpiece.
@@ -121,8 +126,8 @@ export function CtaSection() {
             data-ocid="cta.start_project_button"
             className="inline-flex items-center gap-2 px-10 py-4 rounded-md font-body font-semibold text-sm transition-smooth focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none hover:opacity-90 hover:shadow-gold-glow"
             style={{
-              background: "oklch(var(--accent))",
-              color: "oklch(0.10 0.01 260)",
+              background: "oklch(0.99 0 0)",
+              color: "oklch(0.50 0.14 58)",
             }}
           >
             Start Your Project
